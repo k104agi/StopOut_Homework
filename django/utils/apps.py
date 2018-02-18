@@ -1,5 +1,5 @@
 from django.apps import AppConfig
 
 
-class CrawlerConfig(AppConfig):
+class UtilsConfig(AppConfig):
     name = 'utils'

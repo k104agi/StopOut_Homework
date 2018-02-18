@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h2><a href="{% url 'webtoon:detail' webtoon.id %}">{{ webtoon.webtoon_name }}</a></h2>
+    <h4>{{ webtoon.author }} | {{ webtoon.description }} </h4>
+    <ul>
+        {% for episode in episode_list %}
+
+        <li>
+            {{ episode }}
+        </li>
+        {% endfor %}
+    </ul>
+{% endblock %}

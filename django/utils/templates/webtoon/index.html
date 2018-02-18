@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% block content %}
+
+{% if webtoon_list %}
+    <ul>
+        {% for webtoon in webtoon_list %}
+        <li>
+            <a href="{% url 'webtoon:detail' webtoon.id %}">
+            {{ webtoon }}
+            </a>
+        </li>
+        {% endfor %}
+    </ul>
+{% else %}
+    <p>No Webtoon is available.</p>
+{% endif %}
+{% endblock %}
